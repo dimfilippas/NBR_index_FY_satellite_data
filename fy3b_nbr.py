@@ -361,13 +361,13 @@ def main():
     fy3b_250(FYobj.master_image,FYobj.master_path)
     fy3b_1000(FYobj.reference_image,FYobj.reference_path)
     fy3b_250(FYobj.reference_image,FYobj.reference_path)
-    '''
+    
     CloudMask_FY3b(FYobj.master_path,FYobj,FYobj.master)
     CloudMask_FY3b(FYobj.reference_path,FYobj,FYobj.reference)
-    
+    '''
     reproject(FYobj.master_path,FYobj.master_reproject)
     reproject(FYobj.reference_path,FYobj.reference_reproject)
-    
+    '''
     nbr_index(FYobj.master_reproject,FYobj.master,FYobj)
     nbr_index(FYobj.reference_reproject,FYobj.reference,FYobj)
     
@@ -378,6 +378,6 @@ def main():
     remove_by_ext(FYobj.ExportPath, extension[0])
     remove_by_ext(FYobj.ExportPath, extension[1])
     print datetime.now() - startTime
-    '''
+    
 if __name__ == '__main__':
     sys.exit(main())
